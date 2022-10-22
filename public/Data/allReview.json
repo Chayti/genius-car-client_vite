@@ -1,0 +1,40 @@
+{
+    "reviews": [
+        {
+            "_id": "01khu8457sf93976642jhyf5788a",
+            "customer_id": "01",
+            "name": "Awlad Hossain",
+            "img": "https://i.ibb.co/XyKX128/istockphoto-1143511824-612x612.jpg",
+            "occupation": "Businessman",
+            "opinion": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut velit odit blanditiis assumenda eligendi. Laudantium reprehenderit facilis in, illum inventore aspernatur accusantium. Ipsam eum nesciunt molestias eos.",
+            "ratings": 5
+        },
+        {
+            "_id": "01khu8457sf93976642jhyf5789b",
+            "customer_id": "02",
+            "name": "Sara Hayat",
+            "img": "https://i.ibb.co/9Y19cNr/19a7f491832be04fd24a72470d841a6efa956366.png",
+            "occupation": "Painter",
+            "opinion": "Dolorum voluptates quam corporis, repellat facere harum facilis delectus ullam minus hic dignissimos totam ipsam at voluptatibus eos inventore, laudantium, quod accusamus dolorem! Odit at sint itaque quis, sequi, ad soluta? ",
+            "ratings": 4.5
+        },
+        {
+            "_id": "01khu8457sf93976642jhyf5787c",
+            "customer_id": "03",
+            "name": "Zaheen Ahmed",
+            "img": "https://i.ibb.co/kQr33NR/men.png",
+            "occupation": "Industrialist",
+            "opinion": "Quo, odit, harum, vel voluptates nihil repellat vero assumenda porro quae nisi vitae molestias saepe recusandae odio rerum sint molestiae  aliquid, vitae culpa? Quam sit non, adipisci aperiam nulla eaque illum ab fugit. ",
+            "ratings": 4
+        },
+        {
+            "_id": "01khu8457sf93976642jhyf5786d",
+            "customer_id": "04",
+            "name": "Romi Neheru",
+            "img": "https://i.ibb.co/9Y19cNr/19a7f491832be04fd24a72470d841a6efa956366.png",
+            "occupation": "Actress",
+            "opinion": "Numquam ea incidunt quibusdam nam. Voluptatem excepturi praesentium nam, neque sequi cupiditate sint repudiandae nisi in aperiam eum at expedita velit. Alias cumque vitae sunt ea natus iusto omnis doloribus quae, harum libero.",
+            "ratings": 5
+        }
+    ]
+}
