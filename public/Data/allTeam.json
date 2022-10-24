@@ -1,0 +1,31 @@
+{
+    "team_members": [
+        {
+            "team_id": "20",
+            "name": "Peter Stevens",
+            "img": "https://i.ibb.co/T1zgF9C/1.jpg",
+            "faceook": "https://www.facebook.com",
+            "twitter": "https://twitter.com",
+            "linkedin": "https://www.linkedin.com/",
+            "instagram": "https://www.instagram.com"
+        },
+        {
+            "team_id": "21",
+            "name": "Guy Rios",
+            "img": "https://i.ibb.co/mD5SC1G/2.jpg",
+            "faceook": "https://www.facebook.com",
+            "twitter": "https://twitter.com",
+            "linkedin": "https://www.linkedin.com/",
+            "instagram": "https://www.instagram.com"
+        },
+        {
+            "team_id": "22",
+            "name": "Tommie Frazier",
+            "img": "https://i.ibb.co/7yBVbKR/3.jpg",
+            "faceook": "https://www.facebook.com",
+            "twitter": "https://twitter.com",
+            "linkedin": "https://www.linkedin.com/",
+            "instagram": "https://www.instagram.com"
+        }
+    ]
+}
