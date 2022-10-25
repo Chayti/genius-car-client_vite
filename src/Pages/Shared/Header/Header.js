@@ -22,15 +22,15 @@ const Header = () => {
         <li><NavLink to="/service">Service</NavLink></li>
         <li><NavLink to="/blog">Blog</NavLink></li>
         <li><NavLink to="/contact">Contact</NavLink></li>
-        <div className="avatar flex items-center">
-            <div className="w-10 h-10 ml-9 mr-3 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+        <div className="avatar lg:flex lg:items-center">
+            <div className="w-10 h-10 ml-4 my-3 lg:my-0 lg:ml-9 lg:mr-3 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
                 <img src="https://placeimg.com/192/192/people" />
             </div>
         </div>
         <li>{user ? <button className="border-solid border-2 hover:border-orange-600" onClick={logout} >Sign Out</button> : <NavLink className="border-solid border-2 bg-orage-600" to="/login">Login</NavLink>}</li>
     </>
     return (
-        <div className="navbar bg-orange-100 justify-center">
+        <div className="navbar bg-orange-100 lg:justify-center">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
