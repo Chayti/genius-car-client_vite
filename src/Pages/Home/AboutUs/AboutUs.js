@@ -6,7 +6,7 @@ import img2 from "./about_us/2.jpg"
 
 const AboutUs = () => {
     return (
-        <div className="section-2 mt-20 w-5/6 mx-auto">
+        <div className="section-2 mt-20">
             <div className="lg:flex justify-between">
                 <div className="about">
                     <img className="about-img-1" src={img1} alt="" />
