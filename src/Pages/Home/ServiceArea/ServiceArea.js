@@ -26,6 +26,9 @@ const ServiceArea = () => {
                     ></SingleService>)
                 }
             </div>
+            <div className="text-center">
+                <button className="mt-7 text-orange-600 btn border-solid border-2 border-orange-600" >More Services</button>
+            </div>
         </div>
     );
 };
