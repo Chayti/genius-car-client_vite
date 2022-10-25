@@ -2,6 +2,13 @@ import React from "react";
 import { FaGoogle, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { Link } from "react-router-dom";
 
+/***
+ * Footer component from daisy ui - documentation
+ * used component ==>>> https://i.ibb.co/9yYMGXK/footer.jpg
+ * Changes in default footer 
+ * svg is changed, social icons added, p text added, a tags are replaced with link
+ */
+
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-black text-white">
