@@ -19,6 +19,7 @@ const Home = () => {
             <Team></Team>
             <CoreFeatures></CoreFeatures>
             <Review></Review>
+            {/* checking branch push */}
         </div>
     );
 };
