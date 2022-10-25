@@ -6,6 +6,7 @@ import img3 from "./homeCarousel/3.jpg";
 import img4 from "./homeCarousel/4.jpg";
 import TopCarouselDetails from './TopCarouselDetails';
 
+
 /***
  * Used this component from daisy => https://i.ibb.co/BfnhQFd/top-Carousel.jpg
  * but customized a lot

@@ -3,7 +3,7 @@ import SingleService from './SingleService/SingleService';
 
 const ServiceArea = () => {
 
-    const [services, setServices] = useState({});
+    const [services, setServices] = useState([]);
 
     useEffect(() => {
         fetch("Data/allServices.json")
@@ -20,7 +20,7 @@ const ServiceArea = () => {
             </div>
             <div class="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
-                    services.map(service => <SingleService
+                    services?.map(service => <SingleService
                         key={service.service_id}
                         service={service}
                     ></SingleService>)
