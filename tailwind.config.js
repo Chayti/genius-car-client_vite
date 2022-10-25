@@ -7,7 +7,7 @@ module.exports = {
         themes: [
             {
                 geniusCartheme: {
-                    primary: "#0FCFEC",
+                    primary: "rgb(234 88 12)",
                     secondary: "#19D3AE",
                     accent: "#3A4256",
                     neutral: "#3d4451",
