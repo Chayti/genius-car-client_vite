@@ -22,7 +22,7 @@ const Contact = () => {
         }
     ]
     return (
-        <div className="mt-10 bg-black rounded-lg">
+        <div className="mt-20 bg-black rounded-lg">
             <div class="p-20 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {
                     contacts.map((contact, index) => <ContactWays
