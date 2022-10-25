@@ -12,7 +12,7 @@ const Team = () => {
     }, [])
 
     return (
-        <div className="section-2 mt-20">
+        <div className="mt-20">
             <div className="mx-7 ml-3 px-5 mt-7 lg:mt-0 text-center">
                 <p className="text-orange-700 font-bold">Team</p>
                 <h2 className="md:text-3xl md:font-bold mt-3">Meet Our Team</h2><br />
