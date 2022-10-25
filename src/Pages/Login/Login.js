@@ -1,6 +1,7 @@
 import React from "react";
 import illustration from "../../assets/others/Illustration.svg";
-const Registration = () => {
+import SocialAuth from "../../components/SocialAuthentication/SocialAuth";
+const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
   };
@@ -11,18 +12,9 @@ const Registration = () => {
           <img src={illustration} className="h-4/5 block mx-auto" alt="Password_image" />
         </div>
         <div className="">
-          <h1 className="font-bold text-center text-3xl">Sign Up</h1>
+          <h1 className="font-bold text-center text-3xl">Login</h1>
           <form onSubmit={handleSubmit} className="md:w-1/2 mx-auto">
-            <div className="form-control w-full max-w-xs mb-6">
-              <label className="label">
-                <span className="label-text font-bold">Name</span>
-              </label>
-              <input
-                type="text"
-                placeholder="Type here"
-                className="input input-bordered max-w-xs"
-              />
-            </div>
+            
             <div className="form-control w-full max-w-xs mb-6">
               <label className="label">
                 <span className="label-text font-bold">Email</span>
@@ -47,15 +39,16 @@ const Registration = () => {
               
               <input
                 type="submit"
-                value={"Sign Up"}
+                value={"Sign In"}
                 className="input input-bordered text-white w-full max-w-xs bg-[#FF3811]"
               />
             </div>
           </form>
+          <SocialAuth/>
         </div>
       </div>
     </section>
   );
 };
 
-export default Registration;
+export default Login;
