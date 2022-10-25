@@ -30,7 +30,7 @@ const Header = () => {
         <li>{user ? <button className="border-solid border-2 hover:border-orange-600" onClick={logout} >Sign Out</button> : <NavLink className="border-solid border-2 bg-orage-600" to="/login">Login</NavLink>}</li>
     </>
     return (
-        <div className="navbar bg-orange-100 lg:justify-center">
+        <div className="navbar bg-orange-100 lg:justify-center mb-7">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
