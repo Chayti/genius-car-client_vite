@@ -1,10 +1,10 @@
-import './App.css';
-import Footer from './Pages/Shared/Footer/Footer';
+import { RouterProvider } from 'react-router';
+import { routes } from './Routes/Routes/Routes';
 
 function App() {
   return (
-    <div className="App">
-      <Footer></Footer>
+    <div>
+      <RouterProvider router={routes}></RouterProvider>
     </div>
   );
 }
