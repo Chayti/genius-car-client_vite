@@ -15,7 +15,7 @@ import TopCarouselDetails from './TopCarouselDetails';
 const TopCarousel = () => {
 
     return (
-        <div className="w-5/6 mx-auto">
+        <div>
             <div className="carousel">
                 <div id="slide1" className="carousel-item relative w-full">
                     <TopCarouselDetails carouselImg={img1} btn1="#slide4" btn2="#slide2" ></TopCarouselDetails>

@@ -12,7 +12,7 @@ const ServiceArea = () => {
     }, [])
 
     return (
-        <div className="section-2 mt-20 w-5/6 mx-auto">
+        <div className="section-2 mt-20">
             <div className="mx-7 ml-3 px-5 mt-7 lg:mt-0 text-center">
                 <p className="text-orange-700 font-bold">Service</p>
                 <h2 className="md:text-3xl md:font-bold mt-3">Our Service Area</h2><br />
