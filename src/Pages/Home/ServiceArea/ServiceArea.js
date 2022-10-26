@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import SingleService from './SingleService/SingleService';
 
+/***
+ * daisy ui component -> https://i.ibb.co/hB9tH1Q/service-Area.jpg
+ * */
+
+
 const ServiceArea = () => {
 
     const [services, setServices] = useState([]);
