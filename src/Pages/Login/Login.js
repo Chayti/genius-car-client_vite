@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import illustration from "../../assets/others/Illustration.svg";
 import SocialAuth from "../../components/SocialAuthentication/SocialAuth";
 import { AuthContext } from "../../contexts/AuthProvider";
@@ -77,6 +77,12 @@ const Login = () => {
               />
             </div>
           </form>
+
+          <div className="md:w-1/2 mx-auto">
+            <p className="font-semibold text-center my-6 text-orange-700">
+              New here? <Link to='/register' className="font-bold">Create a New Account</Link>
+            </p>
+          </div>
 
           <div className="md:w-1/2 mx-auto">
             <p className="font-semibold text-center my-6">Or sign in with</p>
