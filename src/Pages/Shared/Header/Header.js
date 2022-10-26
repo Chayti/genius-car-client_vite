@@ -11,9 +11,7 @@ import { AuthContext } from '../../../contexts/AuthProvider';
 
 
 const Header = () => {
-    const {user, logOut} = useContext(AuthContext);
-
-    
+    const { user, logOut } = useContext(AuthContext);
 
     const menuItems = <>
         <li><NavLink to="/home"> Home</NavLink></li>
@@ -26,7 +24,7 @@ const Header = () => {
                 <img src="https://placeimg.com/192/192/people" />
             </div>
         </div>
-        <li>{user?.uid ? <button className="border-solid border-2 hover:border-orange-600" onClick={logOut} >Sign Out</button> : <NavLink className="border-solid border-2 bg-orage-600" to="/login">Login</NavLink>}</li>
+        <li>{user?.uid ? <button className="border-solid border-2 hover:border-orange-600" onClick={logOut} >Sign Out</button> : <NavLink className="border-solid border-2 bg-orange-600" to="/login">Login</NavLink>}</li>
     </>
     return (
         <div className="navbar bg-orange-100 lg:justify-center mb-7">
@@ -39,7 +37,7 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
-                
+
                 <img src={Logo} alt="Logo" />
             </div>
             <div className="navbar-center hidden lg:flex">
