@@ -6,6 +6,7 @@ import img3 from "./homeCarousel/3.jpg";
 import img4 from "./homeCarousel/4.jpg";
 import TopCarouselDetails from './TopCarouselDetails';
 
+
 /***
  * Used this component from daisy => https://i.ibb.co/BfnhQFd/top-Carousel.jpg
  * but customized a lot
@@ -14,7 +15,7 @@ import TopCarouselDetails from './TopCarouselDetails';
 const TopCarousel = () => {
 
     return (
-        <div className="w-5/6 mx-auto">
+        <div>
             <div className="carousel">
                 <div id="slide1" className="carousel-item relative w-full">
                     <TopCarouselDetails carouselImg={img1} btn1="#slide4" btn2="#slide2" ></TopCarouselDetails>

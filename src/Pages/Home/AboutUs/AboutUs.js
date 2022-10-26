@@ -3,11 +3,18 @@ import { Link } from 'react-router-dom';
 import './About.css';
 import img1 from "./about_us/1.jpg"
 import img2 from "./about_us/2.jpg"
-
+import Pdf from "react-to-pdf";
+const ref = React.createRef();
 const AboutUs = () => {
+    const options = {
+        orientation: 'landscape',
+    };
     return (
-        <div className="section-2 mt-20 w-5/6 mx-auto">
-            <div className="lg:flex justify-between">
+        <div className="mt-20">
+            <Pdf targetRef={ref} filename="AboutUs.pdf" options={options}>
+                {({ toPdf }) => <button className="border-b-2 mb-3 border-orange-600 text-orange-600" onClick={toPdf}>Get Manual</button>}
+            </Pdf>
+            <div ref={ref} className="lg:flex justify-between">
                 <div className="about">
                     <img className="about-img-1" src={img1} alt="" />
                     <div className="block about-img-2" >

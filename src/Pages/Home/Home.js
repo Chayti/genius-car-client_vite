@@ -10,7 +10,7 @@ import TopCarousel from './TopCarousel/TopCarousel';
 
 const Home = () => {
     return (
-        <div>
+        <div className="w-5/6 mx-auto">
             <TopCarousel></TopCarousel>
             <AboutUs></AboutUs>
             <ServiceArea></ServiceArea>
