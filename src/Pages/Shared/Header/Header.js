@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import logo from "../../../assets/others/Logo.svg"
-
+import Logo from '../../../assets/others/Logo.svg'
+import { AuthContext } from '../../../contexts/AuthProvider';
 /***
  * avatar is taken from daisy component=> https://i.ibb.co/HCg8TLs/avatar.jpg
  * navbar is taken from daisy, then customized
@@ -11,11 +11,9 @@ import logo from "../../../assets/others/Logo.svg"
 
 
 const Header = () => {
-    const [user, setUser] = useState("mnj");
+    const {user, logOut} = useContext(AuthContext);
 
-    const logout = () => {
-
-    };
+    
 
     const menuItems = <>
         <li><NavLink to="/home"> Home</NavLink></li>
@@ -28,7 +26,7 @@ const Header = () => {
                 <img src="https://placeimg.com/192/192/people" />
             </div>
         </div>
-        <li>{user ? <button className="border-solid border-2 hover:border-orange-600" onClick={logout} >Sign Out</button> : <NavLink className="border-solid border-2 bg-orage-600" to="/login">Login</NavLink>}</li>
+        <li>{user?.uid ? <button className="border-solid border-2 hover:border-orange-600" onClick={logOut} >Sign Out</button> : <NavLink className="border-solid border-2 bg-orage-600" to="/login">Login</NavLink>}</li>
     </>
     return (
         <div className="navbar bg-orange-100 lg:justify-center mb-7">
@@ -41,7 +39,8 @@ const Header = () => {
                         {menuItems}
                     </ul>
                 </div>
-                <img src={logo} alt="" />
+                
+                <img src={Logo} alt="Logo" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
