@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import illustration from "../../assets/others/Illustration.svg";
 import { AuthContext } from "../../contexts/AuthProvider";
 import SocialAuth from "./SocialAuth";
@@ -15,7 +16,7 @@ const Registration = () => {
     const photoURL = form.photoURL?.value || "";
     const email = form.email.value;
     const password = form.password.value;
-    
+
 
     createUser(email, password)
       .then((result) => {
@@ -39,13 +40,13 @@ const Registration = () => {
     };
 
     updateUserProfile(profile)
-      .then(() => {})
+      .then(() => { })
       .catch((error) => console.error(error));
   };
 
   const handleEmailVerification = () => {
     verifyEmail()
-      .then(() => {})
+      .then(() => { })
       .catch((error) => console.error(error));
   };
   return (
@@ -102,6 +103,11 @@ const Registration = () => {
               />
             </div>
           </form>
+          <div className="md:w-1/2 mx-auto">
+            <p className="font-semibold text-center my-6 text-orange-700">
+              Already registered? <Link className="font-bold" to='/login'>Go to log in</Link>
+            </p>
+          </div>
           <div className="md:w-1/2 mx-auto">
             <p className="font-semibold text-center my-6">Or sign up with</p>
             <SocialAuth />
