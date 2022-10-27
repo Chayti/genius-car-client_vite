@@ -19,9 +19,23 @@ const Header = () => {
       </li>
 
       <li>
-        <NavLink to="/service">Services</NavLink>
+        <NavLink to="/services">Services</NavLink>
       </li>
-
+      {user?.uid && (
+        <li>
+          <NavLink to="/myOrders">My Order</NavLink>
+        </li>
+      )}
+      {user?.uid && (
+        <li>
+          <NavLink to="/allOrders">All Orders</NavLink>
+        </li>
+      )}
+      {user?.uid && (
+        <li>
+          <NavLink to="/manageService">Manage Services</NavLink>
+        </li>
+      )}
       {user?.uid && (
         <div className="avatar lg:flex lg:items-center">
           <div className="w-10 h-10 ml-4 my-3 lg:my-0 lg:ml-9 lg:mr-3 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">

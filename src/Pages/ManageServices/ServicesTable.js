@@ -1,26 +1,25 @@
 import React from "react";
-import SingleItem from "./SingleItem";
+import ServiceInfoRow from "./ServiceInfoRow";
 
-const AllItems = ({orders}) => {
+const ServicesTable = ({ services,setRefetch }) => {
+  
   return (
-    // Used a table from daisyUI. 
+    // Used a table from daisyUI.
     // Table starting
     <div className=" my-10 overflow-x-auto w-full">
       <table className="table w-full">
         <thead>
           <tr>
-            <th>Action</th>
             <th>Product</th>
-            <th>Price</th>
-            <th>Email</th>
-            <th>Status</th>
+            <th>Edit</th>
+            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
           {/* Show single item of cart by using map */}
-          {
-            orders?.map(order=> <SingleItem order={order}/>)
-          }
+          {services?.map((service) => (
+            <ServiceInfoRow service={service} setRefetch={setRefetch}/>
+          ))}
         </tbody>
       </table>
     </div>
@@ -28,4 +27,4 @@ const AllItems = ({orders}) => {
   );
 };
 
-export default AllItems;
+export default ServicesTable;

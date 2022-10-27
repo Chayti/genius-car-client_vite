@@ -15,7 +15,7 @@ const Checkout = () => {
     const address = form.address.value;
     const message = form.message.value;
     const orderData = {
-      userNama: user?.displayName || "No name",
+      userName: user?.displayName || "No name",
       userEmail: user?.email || "No email",
       phone,
       address,
@@ -36,7 +36,10 @@ const Checkout = () => {
       body: JSON.stringify(orderData),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        alert("Ordered successfully");
+        
+      });
   }
   return (
     <section className="container mx-auto lg:px-12">
