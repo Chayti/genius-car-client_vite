@@ -14,7 +14,7 @@ const SingleService = () => {
   return (
     <div>
       <Banner title={"Service Details"}></Banner>
-
+      {/* Service */}
       {/* service details */}
       <div class="grid grid-cols-1 lg:grid-cols-10 mt-16 mx-4 gap-10 lg:m-16">
         <div className="lg:col-span-7">
@@ -68,7 +68,7 @@ const SingleService = () => {
                 </h1>
                 {/* DaisyUI link: https://daisyui.com/components/button/ */}
                 {/* Component name:Wide button*/}
-                <Link to="/checkout">
+                <Link>
                   <button className="btn btn-wide border-0 bg-orange-500 text-white">
                     Proceed Checkout
                   </button>
