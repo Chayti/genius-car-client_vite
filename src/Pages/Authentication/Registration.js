@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import illustration from "../../assets/others/Illustration.svg";
-import SocialAuth from "../../components/SocialAuthentication/SocialAuth";
 import { AuthContext } from "../../contexts/AuthProvider";
+import SocialAuth from "./SocialAuth";
+
 const Registration = () => {
   const [error, setError] = useState("");
   const { createUser, updateUserProfile, verifyEmail } =

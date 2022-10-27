@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import illustration from "../../assets/others/Illustration.svg";
-import SocialAuth from "../../components/SocialAuthentication/SocialAuth";
 import { AuthContext } from "../../contexts/AuthProvider";
+import SocialAuth from "./SocialAuth";
+
 const Login = () => {
   const [error, setError] = useState("");
   const { signIn, setLoading } = useContext(AuthContext);
