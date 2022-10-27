@@ -1,7 +1,43 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useLoaderData } from "react-router-dom";
 import BannerImage from "../../assets/asset/Checkout/CheckoutBanner.png";
+import { AuthContext } from "../../contexts/AuthProvider";
 import Banner from "../SingleService/Banner/Banner";
 const Checkout = () => {
+  const productDetail = useLoaderData();
+
+  const { user } = useContext(AuthContext);
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+
+    const phone = form.phone.value;
+    const address = form.address.value;
+    const message = form.message.value;
+    const orderData = {
+      userNama: user?.displayName || "No name",
+      userEmail: user?.email || "No email",
+      phone,
+      address,
+      message,
+      proudctName: productDetail.title,
+      proudctImage: productDetail.img,
+      proudctId: productDetail._id,
+      proudctPrice: productDetail.price,
+      status:"pending",
+    };
+    console.log(orderData);
+    fetch(`http://localhost:5000/order`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify(orderData),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  }
   return (
     <section className="container mx-auto lg:px-12">
       {/* <div
@@ -15,8 +51,9 @@ const Checkout = () => {
       </div> */}
       <Banner title={"Check Out"}></Banner>
       <div className="my-6 bg-[#F3F3F3]">
-        <form className="p-4">
+        <form className="p-4" onSubmit={handleSubmit}>
           <div className="grid md:grid-cols-2 gap-4 justify-items-center">
+            {/* DaisyUI input field with level. DaisyUI doesn't provide any form layout */}
             <div className="form-control w-full mb-6">
               <label className="label">
                 <span className="label-text font-bold">Name</span>
@@ -24,8 +61,10 @@ const Checkout = () => {
               <input
                 type="text"
                 name="name"
+                value={user?.displayName}
                 placeholder="Type here"
                 className="input input-bordered w-full"
+                readOnly
               />
             </div>
             <div className="form-control w-full mb-6">
@@ -35,8 +74,10 @@ const Checkout = () => {
               <input
                 type="text"
                 name="email"
+                value={user?.email}
                 placeholder="Type here"
                 className="input input-bordered w-full"
+                readOnly
               />
             </div>
             <div className="form-control w-full mb-6">

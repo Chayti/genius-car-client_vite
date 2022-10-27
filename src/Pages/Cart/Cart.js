@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegTrashAlt, FaReply } from "react-icons/fa";
+import Banner from "../SingleService/Banner/Banner";
 import AllItems from "./AllItems";
 import CartBanner from "./CartBanner";
 
@@ -7,8 +8,13 @@ import CartBanner from "./CartBanner";
 const Cart = () => {
   return (
     <section className="container mx-auto px-6">
-      <CartBanner />
+      {/* Banner using Hero */}
+      <Banner title={"My Orders"} />
+      {/* This component shows all the orders of a specific email. */}
       <AllItems />
+
+
+      {/* This contains  Clear Shopping Cart and Continue Shopping button*/}
       <div className="my-4 grid md:grid-cols-2">
         <button className=" mb-2 flex items-center justify-center">
           <span className="mr-2">
@@ -18,7 +24,8 @@ const Cart = () => {
         </button>
         <button className="flex items-center justify-center">
           <span className="mr-2">
-            <FaRegTrashAlt />
+            {/* Icon form react-icons */}
+            <FaRegTrashAlt /> 
           </span>{" "}
           Clear Shopping Cart
         </button>
