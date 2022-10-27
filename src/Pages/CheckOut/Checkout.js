@@ -24,7 +24,7 @@ const Checkout = () => {
       proudctImage: productDetail.img,
       proudctId: productDetail._id,
       proudctPrice: productDetail.price,
-      status:"pending",
+      status: "pending",
     };
     console.log(orderData);
     fetch(`http://localhost:5000/order`, {
@@ -42,7 +42,7 @@ const Checkout = () => {
       });
   }
   return (
-    <section className="container mx-auto lg:px-12">
+    <section className="w-5/6 mx-auto">
       {/* <div
         className="relative flex items-center justify-center h-[300px] before:content-[''] before:absolute before:top-0 before:right-0 before:bottom-0 before:left-0 before:bg-[rgba(0,0,0,0.25)]"
         style={{
@@ -53,8 +53,8 @@ const Checkout = () => {
         <h1 className="text-white text-6xl font-extrabold">Checkout</h1>
       </div> */}
       <Banner title={"Check Out"}></Banner>
-      <div className="my-6 bg-[#F3F3F3]">
-        <form className="p-4" onSubmit={handleSubmit}>
+      <div className="my-6 bg-[#F3F3F3] w-5/6 mx-auto">
+        <form className="p-4 m-3" onSubmit={handleSubmit}>
           <div className="grid md:grid-cols-2 gap-4 justify-items-center">
             {/* DaisyUI input field with level. DaisyUI doesn't provide any form layout */}
             <div className="form-control w-full mb-6">
