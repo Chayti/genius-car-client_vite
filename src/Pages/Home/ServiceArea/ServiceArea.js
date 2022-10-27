@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import SingleService from './SingleService/SingleService';
 
+/***
+ * daisy ui component -> https://i.ibb.co/hB9tH1Q/service-Area.jpg
+ * */
+
+
 const ServiceArea = () => {
 
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("Data/allServices.json")
+        fetch("http://localhost:5000/services")
             .then(res => res.json())
-            .then(data => setServices(data.services))
+            .then(data => setServices(data))
     }, [])
 
     return (

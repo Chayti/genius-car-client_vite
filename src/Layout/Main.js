@@ -5,7 +5,8 @@ import Header from '../Pages/Shared/Header/Header';
 
 const Main = () => {
     return (
-        <div>
+        // Keep the footer always at the bottom
+        <div className='min-h-screen flex flex-col justify-between'>
             <Header></Header>
             <Outlet></Outlet>
             <Footer></Footer>

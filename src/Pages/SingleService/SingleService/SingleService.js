@@ -6,10 +6,12 @@ import ExtraInfo from "../ExtraInfo/ExtraInfo";
 import Sidebar from "../Sidebar/Sidebar";
 
 const SingleService = () => {
-  const data = useLoaderData();
-  const singleService = JSON.parse(data)?.services.find(
-    (d) => d.service_id === "03"
-  );
+  const singleService = useLoaderData();
+  console.log(singleService);
+  const { _id } = singleService;
+  // const singleService = JSON.parse(data)?.services.find(
+  //   (d) => d.service_id === "03"
+  // );
 
   return (
     <div>
