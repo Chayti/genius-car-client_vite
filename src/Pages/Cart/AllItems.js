@@ -3,6 +3,8 @@ import SingleItem from "./SingleItem";
 
 const AllItems = () => {
   return (
+    // Used a table from daisyUI. 
+    // Table starting
     <div className="overflow-x-auto w-full">
       <table className="table w-full">
         <thead>
@@ -15,10 +17,14 @@ const AllItems = () => {
           </tr>
         </thead>
         <tbody>
-          <SingleItem />
+          {/* Show single item of cart by using map */}
+          {
+            <SingleItem />
+          }
         </tbody>
       </table>
     </div>
+    // Table ends here
   );
 };
 

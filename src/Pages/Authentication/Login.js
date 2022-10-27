@@ -48,6 +48,7 @@ const Login = () => {
         <div className="">
           <h1 className="font-bold text-center text-3xl">Login</h1>
           <form onSubmit={handleSubmit} className="md:w-1/2 mx-auto">
+            {/* Input field with level from daisyui */}
             <div className="form-control w-full max-w-xs mb-6">
               <label className="label">
                 <span className="label-text font-bold">Email</span>
@@ -87,6 +88,7 @@ const Login = () => {
 
           <div className="md:w-1/2 mx-auto">
             <p className="font-semibold text-center my-6">Or sign in with</p>
+            {/* Separate component for Social login  */}
             <SocialAuth navigate={navigate} from={from} />
           </div>
         </div>

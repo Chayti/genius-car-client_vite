@@ -5,7 +5,7 @@ import Discount from "../Discount/Discount";
 import ExtraInfo from "../ExtraInfo/ExtraInfo";
 import Sidebar from "../Sidebar/Sidebar";
 
-const SingleService = () => {
+const ServiceDetails = () => {
   const singleService = useLoaderData();
   console.log(singleService);
   const { _id } = singleService;
@@ -70,7 +70,7 @@ const SingleService = () => {
                 </h1>
                 {/* DaisyUI link: https://daisyui.com/components/button/ */}
                 {/* Component name:Wide button*/}
-                <Link>
+                <Link to={`/checkout/${_id}`}>
                   <button className="btn btn-wide border-0 bg-orange-500 text-white">
                     Proceed Checkout
                   </button>
@@ -84,4 +84,4 @@ const SingleService = () => {
   );
 };
 
-export default SingleService;
+export default ServiceDetails;

@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
 import About from "../../Pages/About/About";
+import AllServices from "../../Pages/AllServices/AllServices";
 import Login from "../../Pages/Authentication/Login";
 import Registration from "../../Pages/Authentication/Registration";
 import Cart from "../../Pages/Cart/Cart";
 import Checkout from "../../Pages/CheckOut/Checkout";
 import Home from "../../Pages/Home/Home";
-import ServiceArea from "../../Pages/Home/ServiceArea/ServiceArea";
-import SingleService from "../../Pages/SingleService/SingleService/SingleService";
+import ServiceDetails from "../../Pages/SingleService/ServiceDetails/ServiceDetails";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
@@ -26,7 +26,8 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/service",
-        element: <ServiceArea></ServiceArea>,
+        loader:()=>fetch("http://localhost:5000/services"),
+        element: <AllServices></AllServices>,
       },
       {
         path: "/about",
@@ -34,6 +35,10 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/checkout/:id",
+        loader: ({params}) =>
+          fetch(
+            `http://localhost:5000/service/${params.id}`
+          ),
         element: <PrivateRoute><Checkout/></PrivateRoute>,
       },
       {
@@ -50,7 +55,7 @@ export const routes = createBrowserRouter([
           fetch(
             `http://localhost:5000/service/${params.id}`
           ),
-        element: <SingleService></SingleService>,
+        element: <ServiceDetails></ServiceDetails>,
       },
       {
         path: "/myOrders",

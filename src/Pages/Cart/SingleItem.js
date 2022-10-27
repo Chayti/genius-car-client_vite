@@ -3,6 +3,7 @@ import { FaCut } from "react-icons/fa";
 
 const SingleItem = () => {
   return (
+    // table body for single item. daisyUI
     <tr>
       <th>
         <button
