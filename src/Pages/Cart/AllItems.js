@@ -5,7 +5,7 @@ const AllItems = () => {
   return (
     // Used a table from daisyUI. 
     // Table starting
-    <div className="overflow-x-auto w-full">
+    <div className="overflow-x-auto my-10 w-full">
       <table className="table w-full">
         <thead>
           <tr>

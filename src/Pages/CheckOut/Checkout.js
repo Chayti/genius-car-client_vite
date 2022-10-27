@@ -36,7 +36,10 @@ const Checkout = () => {
       body: JSON.stringify(orderData),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        alert("order confirmed")
+        console.log(data)
+      });
   }
   return (
     <section className="w-5/6 mx-auto">

@@ -16,7 +16,7 @@ const Banner = (props) => {
         <div className="hero-overlay bg-opacity-60 rounded-lg"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-2xl md:text-5xl font-bold">
+            <h1 className="mb-5 text-2xl md:text-5xl font-bold text-white ">
               {props?.title}
             </h1>
           </div>

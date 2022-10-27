@@ -1,7 +1,8 @@
-import React, { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../../../assets/others/Logo.svg";
 import { AuthContext } from "../../../contexts/AuthProvider";
+
 /***
  * avatar is taken from daisy component=> https://i.ibb.co/HCg8TLs/avatar.jpg
  * navbar is taken from daisy, then customized
@@ -21,6 +22,10 @@ const Header = () => {
       <li>
         <NavLink to="/service">Services</NavLink>
       </li>
+
+      {user?.uid && <li>
+        <NavLink to="/myOrders">My Orders</NavLink>
+      </li>}
 
       {user?.uid && (
         <div className="avatar lg:flex lg:items-center">
