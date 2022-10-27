@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import SingleService from './SingleService/SingleService';
 
 /***
@@ -32,7 +33,7 @@ const ServiceArea = () => {
                 }
             </div>
             <div className="text-center">
-                <button className="mt-7 text-orange-600 btn border-solid border-2 border-orange-600" >More Services</button>
+                <Link to="/service"><button className="mt-7 text-orange-600 btn border-solid border-2 border-orange-600" >More Services</button></Link>
             </div>
         </div>
     );

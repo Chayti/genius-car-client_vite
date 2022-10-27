@@ -1,6 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
-import About from "../../Pages/About/About";
 import AllServices from "../../Pages/AllServices/AllServices";
 import Login from "../../Pages/Authentication/Login";
 import Registration from "../../Pages/Authentication/Registration";
@@ -26,20 +25,16 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/service",
-        loader:()=>fetch("http://localhost:5000/services"),
+        loader: () => fetch("http://localhost:5000/services"),
         element: <AllServices></AllServices>,
       },
       {
-        path: "/about",
-        element: <About></About>,
-      },
-      {
         path: "/checkout/:id",
-        loader: ({params}) =>
+        loader: ({ params }) =>
           fetch(
             `http://localhost:5000/service/${params.id}`
           ),
-        element: <PrivateRoute><Checkout/></PrivateRoute>,
+        element: <PrivateRoute><Checkout /></PrivateRoute>,
       },
       {
         path: "/register",
@@ -51,7 +46,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/single-service/:id",
-        loader: ({params}) =>
+        loader: ({ params }) =>
           fetch(
             `http://localhost:5000/service/${params.id}`
           ),
@@ -59,7 +54,7 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/myOrders",
-        element: <PrivateRoute><Cart/></PrivateRoute>,
+        element: <PrivateRoute><Cart /></PrivateRoute>,
       },
     ],
   },
