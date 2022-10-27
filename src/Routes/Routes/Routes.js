@@ -6,7 +6,9 @@ import Registration from "../../Pages/Authentication/Registration";
 import Cart from "../../Pages/Cart/Cart";
 import Checkout from "../../Pages/CheckOut/Checkout";
 import Home from "../../Pages/Home/Home";
+import ServiceArea from "../../Pages/Home/ServiceArea/ServiceArea";
 import SingleService from "../../Pages/SingleService/SingleService/SingleService";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 
 export const routes = createBrowserRouter([
@@ -15,16 +17,24 @@ export const routes = createBrowserRouter([
     element: <Main></Main>,
     children: [
       {
+        path: "/",
+        element: <Home></Home>,
+      },
+      {
         path: "/home",
         element: <Home></Home>,
+      },
+      {
+        path: "/service",
+        element: <ServiceArea></ServiceArea>,
       },
       {
         path: "/about",
         element: <About></About>,
       },
       {
-        path: "/checkout",
-        element: <Checkout/>,
+        path: "/checkout/:id",
+        element: <PrivateRoute><Checkout/></PrivateRoute>,
       },
       {
         path: "/register",
@@ -35,16 +45,16 @@ export const routes = createBrowserRouter([
         element: <Login></Login>,
       },
       {
-        path: "/single-service",
-        loader: () =>
+        path: "/single-service/:id",
+        loader: ({params}) =>
           fetch(
-            "https://raw.githubusercontent.com/Chayti/Genius-Car-B-6/main/public/Data/allServices.json"
+            `http://localhost:5000/service/${params.id}`
           ),
         element: <SingleService></SingleService>,
       },
       {
         path: "/myOrders",
-        element: <Cart/>,
+        element: <PrivateRoute><Cart/></PrivateRoute>,
       },
     ],
   },

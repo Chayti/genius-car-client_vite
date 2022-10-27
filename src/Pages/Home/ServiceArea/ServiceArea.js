@@ -11,9 +11,9 @@ const ServiceArea = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("Data/allServices.json")
+        fetch("http://localhost:5000/services")
             .then(res => res.json())
-            .then(data => setServices(data.services))
+            .then(data => setServices(data))
     }, [])
 
     return (

@@ -15,7 +15,7 @@ const Checkout = () => {
 
       <div className="my-6 bg-[#F3F3F3]">
         <form className="p-4">
-          <div className="grid grid-cols-2 gap-4 justify-items-center">
+          <div className="grid md:grid-cols-2 gap-4 justify-items-center">
             
             <div className="form-control w-full mb-6">
               <label className="label">

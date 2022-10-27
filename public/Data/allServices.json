@@ -1,7 +1,6 @@
-{
-    "services": [
+
         {
-            "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
+            
             "service_id": "01",
             "title": "Full Car Repair",
             "img": "https://i.ibb.co/R6Z2nFM/55.jpg",
@@ -27,7 +26,7 @@
             ]
         },
         {
-            "_id": "0382e0e58a5c404fbd15261f11c2ab7b",
+            
             "service_id": "02",
             "title": "Engine Repair",
             "img": "https://i.ibb.co/5MvmD2g/88.jpg",
@@ -53,7 +52,7 @@
             ]
         },
         {
-            "_id": "0482e0e58a5c404fbd15261f11c2ab8c",
+            
             "service_id": "03",
             "title": "Automatic Services",
             "img": "https://i.ibb.co/wh7t3N3/555.jpg",
@@ -79,7 +78,7 @@
             ]
         },
         {
-            "_id": "0582e0e58a5c404fbd15261f11c2ab9d",
+            
             "service_id": "04",
             "title": "Engine Oil Change",
             "img": "https://i.ibb.co/T2cpBd5/888.jpg",
@@ -105,7 +104,7 @@
             ]
         },
         {
-            "_id": "0682e0e58a5c404fbd15261f11c2ab5e",
+            
             "service_id": "05",
             "title": "Battery Charge",
             "img": "https://i.ibb.co/ydCbDN3/5555.jpg",
@@ -131,7 +130,7 @@
             ]
         },
         {
-            "_id": "0782e0e58a5c404fbd15261f11c2ab1f",
+            
             "service_id": "06",
             "title": "Electrical System",
             "img": "https://i.ibb.co/KzCG8qr/8888.jpg",
@@ -156,5 +155,3 @@
                 }
             ]
         }
-    ]
-}
