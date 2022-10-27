@@ -7,8 +7,8 @@ import Sidebar from "../Sidebar/Sidebar";
 
 const SingleService = () => {
   const singleService = useLoaderData();
-  console.log(singleService)
-  const {_id} = singleService;
+  console.log(singleService);
+  const { _id } = singleService;
   // const singleService = JSON.parse(data)?.services.find(
   //   (d) => d.service_id === "03"
   // );
@@ -16,7 +16,7 @@ const SingleService = () => {
   return (
     <div>
       <Banner title={"Service Details"}></Banner>
-
+      {/* Service */}
       {/* service details */}
       <div class="grid grid-cols-1 lg:grid-cols-10 mt-16 mx-4 gap-10 lg:m-16">
         <div className="lg:col-span-7">
@@ -70,7 +70,7 @@ const SingleService = () => {
                 </h1>
                 {/* DaisyUI link: https://daisyui.com/components/button/ */}
                 {/* Component name:Wide button*/}
-                <Link to={`/checkout/${_id}`}>
+                <Link>
                   <button className="btn btn-wide border-0 bg-orange-500 text-white">
                     Proceed Checkout
                   </button>

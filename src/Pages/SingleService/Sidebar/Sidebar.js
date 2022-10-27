@@ -6,11 +6,9 @@ const Sidebar = () => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/Chayti/Genius-Car-B-6/Shafia/public/Data/allCategory.json"
-    )
+    fetch("http://localhost:5000/services")
       .then((res) => res.json())
-      .then((data) => setCategories(data.service_category));
+      .then((data) => setCategories(data));
   }, []);
 
   let activeClassName =
@@ -22,14 +20,14 @@ const Sidebar = () => {
         <div className="grid grid-cols-1 gap-y-3">
           {categories.map((category) => (
             <NavLink
-              to="/"
+              to={`/single-service/${category._id}`}
               className={({ isActive }) =>
                 isActive
                   ? activeClassName
                   : "w-100 h-12 rounded-lg bg-white flex justify-around items-center"
               }
             >
-              {category.category_name}
+              {category?.title}
               <HiArrowRight />
             </NavLink>
           ))}
