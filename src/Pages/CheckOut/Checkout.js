@@ -15,7 +15,7 @@ const Checkout = () => {
     const address = form.address.value;
     const message = form.message.value;
     const orderData = {
-      userNama: user?.displayName || "No name",
+      userName: user?.displayName || "No name",
       userEmail: user?.email || "No email",
       phone,
       address,
@@ -37,8 +37,13 @@ const Checkout = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+<<<<<<< HEAD
         alert("order confirmed")
         console.log(data)
+=======
+        alert("Ordered successfully");
+        
+>>>>>>> e1b6fd4c02d18556c6f6eafc4a1ae8c2e25aa7f1
       });
   }
   return (
