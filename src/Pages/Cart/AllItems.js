@@ -1,7 +1,7 @@
 import React from "react";
 import SingleItem from "./SingleItem";
 
-const AllItems = ({orders}) => {
+const AllItems = ({ orders }) => {
   return (
     // Used a table from daisyUI. 
     // Table starting
@@ -19,7 +19,7 @@ const AllItems = ({orders}) => {
         <tbody>
           {/* Show single item of cart by using map */}
           {
-            orders?.map(order=> <SingleItem order={order}/>)
+            orders?.map(order => <SingleItem order={order} />)
           }
         </tbody>
       </table>

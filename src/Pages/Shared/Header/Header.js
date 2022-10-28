@@ -1,10 +1,13 @@
-import React, { useContext, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useContext } from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../../../assets/others/Logo.svg";
 import { AuthContext } from "../../../contexts/AuthProvider";
+
 /***
  * avatar is taken from daisy component=> https://i.ibb.co/HCg8TLs/avatar.jpg
- * navbar is taken from daisy, then customized
+ * navbar is taken from daisy,=> 
+ * # responsive (dropdown menu on small screen, center menu on large screen)
+ * then customized
  * linkes are replaced with navlink
  * some color themes are in tailwind.config.js
  * */
@@ -28,7 +31,7 @@ const Header = () => {
       )}
       {user?.uid && (
         <li>
-          <NavLink to="/allOrders">All Orders</NavLink>
+          <NavLink to="/addService">Add Service</NavLink>
         </li>
       )}
       {user?.uid && (

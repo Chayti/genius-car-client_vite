@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthProvider";
 import Banner from "../SingleService/Banner/Banner";
 import AllItems from "./AllItems";
-import CartBanner from "./CartBanner";
 
 const Cart = () => {
   const { user } = useContext(AuthContext);
@@ -25,14 +24,14 @@ const Cart = () => {
 
       {/* This contains  Clear Shopping Cart and Continue Shopping button*/}
       <div className="my-4 grid md:grid-cols-2">
-        
-          <button onClick={()=>{navigate(`/services`)}} className="mb-2 flex items-center justify-center">
-            <span className="mr-2">
-              <FaReply />
-            </span>{" "}
-            Continue Shopping
-          </button>
-        
+
+        <button onClick={() => { navigate(`/services`) }} className="mb-2 flex items-center justify-center">
+          <span className="mr-2">
+            <FaReply />
+          </span>{" "}
+          Continue Shopping
+        </button>
+
         <button className="flex items-center justify-center">
           <span className="mr-2">
             {/* Icon form react-icons */}

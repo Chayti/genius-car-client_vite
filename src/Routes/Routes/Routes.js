@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../../Layout/Main";
+import AddService from "../../Pages/AddService/AddService";
 import AllServices from "../../Pages/AllServices/AllServices";
 import Login from "../../Pages/Authentication/Login";
 import Registration from "../../Pages/Authentication/Registration";
@@ -52,6 +53,10 @@ export const routes = createBrowserRouter([
             `http://localhost:5000/service/${params.id}`
           ),
         element: <ServiceDetails></ServiceDetails>,
+      },
+      {
+        path: "/addService",
+        element: <PrivateRoute><AddService /></PrivateRoute>,
       },
       {
         path: "/myOrders",
