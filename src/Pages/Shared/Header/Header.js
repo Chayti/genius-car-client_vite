@@ -5,7 +5,9 @@ import { AuthContext } from "../../../contexts/AuthProvider";
 
 /***
  * avatar is taken from daisy component=> https://i.ibb.co/HCg8TLs/avatar.jpg
- * navbar is taken from daisy, then customized
+ * navbar is taken from daisy,=> 
+ * # responsive (dropdown menu on small screen, center menu on large screen)
+ * then customized
  * linkes are replaced with navlink
  * some color themes are in tailwind.config.js
  * */
