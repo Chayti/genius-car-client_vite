@@ -25,9 +25,13 @@ const ManageServices = () => {
       {/* Banner using Hero */}
       <Banner title={"Manage Services"} />
       {/* This component shows all the orders of a specific email. */}
+
       <ServicesTable services={services} setRefetch={setRefetch} setSorted={setSorted} />
 
       {/* This contains  Clear Shopping Cart and Continue Shopping button*/}
+
+      <ServicesTable services={services} setRefetch={setRefetch}/>
+      
 
     </section>
   );
